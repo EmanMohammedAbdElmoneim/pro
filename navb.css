@@ -1,0 +1,146 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header.navbar
+{
+    position: absolute;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0);
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999px;
+}
+header .logo
+{
+    height: 40px;
+    float: left;
+    margin: 10px 0px;
+}
+header nav
+{
+    float: right;
+    z-index: 999px;
+}
+header nav ul
+{
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+header nav ul li
+{
+    list-style: none;
+    padding: 20px;
+}
+header nav ul li a
+{
+    color: #32c4fa;
+    text-decoration: none;
+}
+
+header nav ul li:hover
+{
+    background-color: #5a5858;
+    text-decoration: none;
+}
+header nav ul li a:hover, a:link , a:visited , #ai
+{
+    text-decoration: none;
+    color: #f1f2f7;
+}
+#ai{
+    cursor: pointer;
+}
+#drop
+{
+    margin: -30px;
+    display: none;
+    position: absolute;
+    z-index: 55;
+    background-color: #0f0f0f;
+}
+#drop2
+{
+    display: none;
+    position: absolute;
+    z-index: 55;
+    background-color: #171717;
+}
+#drop.down , #drop2.down2
+{
+   display: block;
+}
+#drop2.down2 li{
+    border-bottom: 1px solid white;
+}
+@media (min-width:991px)
+{
+    #drop2{
+    margin: 20px;
+    }
+    #drop{
+    margin: 60px;
+    }
+}
+.toggle-btn span
+{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0px;
+    border-radius: 30px;
+}
+.toggle-btn
+{
+    margin: 15px 0px;
+    float: right;
+    cursor: pointer;
+    display: none;
+    border: 1px white outset;
+    border-radius: 5px;
+    padding: 5px;
+}
+@media (max-width: 991px)
+{
+    header.navbar
+    {
+        padding: 0 20px;
+        z-index: 999;
+        position: fixed;!important
+    }
+    .toggle-btn
+    {
+        display: block;
+    }
+    header nav
+    {
+        position: absolute;
+        width: 100%;
+        background-color: black;
+        top: -400px;
+        left: 0px;
+        z-index: 999;
+    }
+    header nav.active
+    {
+        top: 60px;
+    }
+    header nav ul
+    {
+        display: block;
+    }  
+    #drop{
+        margin-left: 120px;
+    }
+    #drop2.down2{
+        display:flex;
+    }
+    #drop2.down2 li{
+        
+        border-right: 1px solid white;
+    }
+}
