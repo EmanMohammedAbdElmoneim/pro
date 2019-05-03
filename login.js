@@ -32,7 +32,7 @@ function logIn (){
     let user = document.getElementById("use").value;
     let pas=document.getElementById("pass").value;
     if(users.includes(user) && pass[users.indexOf(user)]==pas){
-        window.location="home.html";
+        window.location="index.html";
     }
     else {
         alert("your email or password arenot correct");
