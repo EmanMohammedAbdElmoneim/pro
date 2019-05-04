@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <link rel="icon" href="hacker_PNG23.png">
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet"href="navb.css">
+    <style>
+        body{
+            background-color: #eff5f7;
+        }
+        
+        table{
+            text-align: center;
+            
+        }  
+        td:hover{
+          background-color:darkcyan;
+        }
+        a#purple{
+            color: darkslategray;
+        }
+        a#purple:hover{
+            color:aqua;
+        }
+        a#purple:visited{
+            color:blueviolet;
+        }
+        h1{
+            color:darkcyan;
+        }
+        h2{
+            color:darkcyan
+        }
+    </style>
+</head>
+<body>
+<header class="navbar">
+            <img class="logo" src="images/logo.png">
+            <nav id="toggle">
+                <ul>
+                    <li ><a href="home.html">Home</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li ><a onclick="menu()" id="ai" class="aii">More <span class="caret"></span></a>
+                    </li>
+                    <ul id="drop">
+                            <li><a href="ctf.html">CTF</a></li>
+                            <li><a href="phases.html">Phases of hacking</a></li>
+                            <li><a href="typesOfHackers.html">Types of hackers</a></li>
+                            <li><a href="types%20of%20attacks.html">Different types of attacks</a></li>
+                            <li id="ai" class="aii" onclick="dropd2()">
+                                MalWares<span class="caret"></span>
+                                <ul id="drop2">
+                                    <li><a href="ran.html">Ransomware</a></li>
+                                    <li><a href="keylogger.html">Keylogger</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                    <li id="lu"><a href="sign%20up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li id="lu"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-btn" onclick="toggleSlid()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+    <br><br><br>
+    
+<div class="container-fluid" >
+  <h1 style="text-align: center; ">Top 10 Most Common Types of Cyber Attacks</h1>
+  
+  <div class="row" ;>
+    <div class="col-3 bg-success" style=" color:deepskyblue" >
+<table border="5px"  style="text-align:center;">
+    <tr>
+        <td><a id="purple" href="#"><h3>Denial-of-service (DoS) and distributed denial-of-service (DDoS) attacks</h3></a></td>
+        <td><a id="purple" href="#"><h3>Man-in-the-middle (MitM) attack</h3></a></td>
+    </tr>        
+    <tr>
+        <td><a id="purple" href="#"><h3>Drive-by attack</h3></a></td>
+        <td><a id="purple" href="#"><h3>Password attack</h3></a></td>
+    </tr>        
+    <tr>
+        <td><a id="purple" href="#" ><h3>SQL injection attack</h3></a></td>
+        <td><a id="purple" href="#"><h3>Cross-site scripting (XSS) attack</h3></a></td>
+    </tr>   
+    <tr><td><a id="purple" href="#"><h3>Eavesdropping attack</h3></a></td>
+        <td><a id="purple" href="# b" ><h3>Birthday attack</h3></a></td>
+    </tr>   
+    <tr>
+        <td colspan="2" style="text-align: center;"><a id="purple" href="#"><h3>Malware attack</h3></a></td>
+    </tr>   
+</table>
+<br>
+<h2> Denial-of-service (DoS) and distributed denial-of-service (DDoS) attacks</h2>
+<img  src="images/download.jpg"  style="float: right;">
+<p id="demo" style="font-size: 20px;"></p>
+
+<button type="button" onclick="myFunction()">show more</button>
+<h2>Man-in-the-middle (MitM) attack</h2>
+<img  src="images/dl.png" style="float: right;">
+<p id="dem" style="font-size: 20px;"></p>
+
+<button type="button" onclick="myFunction2()">show more</button>
+        <h2>Phishing and spear phishing attacks</h2>
+        <img src="images/images.jpg" style="float: right;" >
+<p id="de" style="font-size: 20px;"></p>
+
+<button type="button" onclick="myFunction3()">show more</button>
+        <br><br>
+        
+        <b>if you want more visit this link:</b>
+        <a id="purple" href="https://blog.netwrix.com/2018/05/15/top-10-most-common-types-of-cyber-attacks/" style="color: blue">               <br>"https://blog.netwrix.com/2018/05/15/top-10-most-common-types-of-cyber-attacks/" </a>
+        
+      </div>
+  </div>
+</div>
+    
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "A denial-of-service attack overwhelms a system’s resources so that it cannot respond to service requests. A DDoS attack is also an attack on system’s resources, but it is launched from a large number of other host machines that are infected by malicious software controlled by the attacker Unlike attacks that are designed to enable the attacker to gain or increase access, denial-of-service doesn’t provide direct benefits for attackers. For some of them, it’s enough to have the satisfaction of service denial. However, if the attacked resource belongs to a business competitor, then the benefit to the attacker may be real enough. Another purpose of a DoS attack can be to take a system offline so that a different kind of attack can be launched. One common example is session hijacking, which I’ll describe later";
+}
+function myFunction2(){
+    document.getElementById("dem").innerHTML="A MitM attack occurs when a hacker inserts itself between the communications of a client and a server. Here are some common types of man-in-the-middle attacks Session hijacking In this type of MitM attack, an attacker hijacks a session between a trusted client and network server. The attacking computer substitutes its IP address for the trusted client while the server continues the session, believing it is communicating with the client";
+}
+  function myFunction3(){
+    document.getElementById("de").innerHTML="Phishing attack is the practice of sending emails that appear to be from trusted sources with the goal of gaining personal information or influencing  users to do something. It combines social engineering and technical trickery. It could involve an attachment to an email that loads malware onto your computer. It could also be a link to an illegitimate website that can trick you into downloading malware or handing over your personal information." ;
+
+  }
+    function toggleSlid()
+{
+    document.getElementById("toggle").classList.toggle("active");
+}
+
+function menu(){
+    document.getElementById("drop").classList.toggle("down");    
+}
+
+function dropd2(){
+    document.getElementById("drop2").classList.toggle("down2");
+}
+
+window.onclick=function(e){
+    if(!e.target.matches('.aii')){
+        var mydrop2= document.getElementById("drop");
+        if ( mydrop2.classList.contains('down')){
+            mydrop2.classList.remove('down');
+        }
+    }
+}
+</script>
+    </body>
+</html>

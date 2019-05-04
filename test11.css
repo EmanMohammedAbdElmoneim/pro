@@ -1,0 +1,55 @@
+
+.heading{
+    margin: 2% 25% 4% 25%;
+    width: 50%;
+    height: 40%;
+}
+.mm{
+    width: 100%;
+    height: 100%;
+}
+p,h1{
+    display: none;
+}
+.dd1{
+    margin: 0% 5% 4% 7.5%;
+    width: 25%;
+    height: 40%;
+    float: left;
+}
+.dd2{
+    margin: 0% 5% 4% 0%;
+    width: 25%;
+    height: 40%;
+    float: left
+}
+.dd3{
+    margin: 0% 5% 4% 0%;
+    width: 25%;
+    height: 40%;
+    float: left
+}
+.dd4{
+    margin: 0% 5% 4% 22.5%;
+    width: 25%;
+    height: 40%;
+    clear: both;
+    float: left;
+}
+.dd5{
+    margin: 0% 22.5% 4% 0%;
+    width: 25%;
+    height: 40%;
+    float: left;
+}
+#h{
+   text-align: center;
+    font-size: 60px;
+    color:darkslateblue;
+}
+#h3{
+    margin: 5% 0 0 0;
+}
+#hr{
+   background-color: darkseagreen;
+}

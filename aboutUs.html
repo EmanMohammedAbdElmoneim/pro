@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ETHICAL HACKING</title>
+        <link rel="icon" href="images/hacker_PNG23.png">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="navb.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            
+    </style>
+        
+    </head>
+    <body>
+        <header class="navbar">
+            <img class="logo" src="images/logo.png">
+            <nav id="toggle">
+                <ul>
+                    <li ><a href="home.html">Home</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li ><a onclick="menu()" id="ai" class="aii">More <span class="caret"></span></a>
+                    </li>
+                    <ul id="drop">
+                            <li><a href="ctf.html">CTF</a></li>
+                            <li><a href="phases.html">Phases of hacking</a></li>
+                            <li><a href="typesOfHackers.html">Types of hackers</a></li>
+                            <li><a href="types%20of%20attacks.html">Different types of attacks</a></li>
+                            <li id="ai" class="aii" onclick="dropd2()">
+                                MalWares<span class="caret"></span>
+                                <ul id="drop2">
+                                    <li><a href="ran.html">Ransomware</a></li>
+                                    <li><a href="keylogger.html">Keylogger</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                    <li id="lu"><a href="sign%20up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li id="lu"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-btn" onclick="toggleSlid()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+        <br><br><br><br><br>
+        <section>
+         <img src="images/new1.jpg"  style="width: 100%">
+            
+            <table>
+                <tr>
+                    <th colspan="2" >What is Ethical Hacking?</th>
+                </tr>
+                <tr>
+                    <td colspan="2" ><p>
+The Certified Ethical Hacker (C|EH) credentialing and training program provided by EC-Council is a respected and trusted ethical hacking program in the industry. Since the inception of Certified Ethical Hacker in 2003, the credential has become one of the best options for industries and companies across the world. The C|EH exam is ANSI 17024 compliant, adding value and credibility to credential members. It is also listed as a baseline certification in the US Department of Defense (DoD) Directive 8570 and is a GCT (GCHQ Certified Training).
+
+Today, you can find Certified Ethical Hackers working with some of the finest and largest companies across industries like healthcare, financial, government, energy and much more!
+</p>
+                    </td></tr>     
+                <tr>
+     
+                    <th>Our crew !!</th>
+                    <th> Our content</th>
+                </tr>
+                <tr>
+                   
+                    <td>
+                    <ul style="list-style-type: square" >
+                        <li>Ahmed AbdElGawad</li>    
+                        <li>Marwa Adel</li>    
+                        <li> Sabah Hussen</li>     
+                        <li>Sarah Ashraf</li>    
+                        <li>Eman Mohammed</li>
+                        </ul>
+                    </td>
+                    <td ><ul style="list-style-type: square">
+                        <li>key logger </li>    
+                        <li> Types of hackers</li>    
+                     
+                        <li>Different types of attacks</li>    
+                        <li>Phases of hacking</li>
+                        <li>CTF</li>
+                        </ul></td></tr>
+            </table>
+           
+             
+            </section>
+        <script>
+            function toggleSlid()
+{
+    document.getElementById("toggle").classList.toggle("active");
+}
+
+function menu(){
+    document.getElementById("drop").classList.toggle("down");    
+}
+
+function dropd2(){
+    document.getElementById("drop2").classList.toggle("down2");
+}
+
+window.onclick=function(e){
+    if(!e.target.matches('.aii')){
+        var mydrop2= document.getElementById("drop");
+        if ( mydrop2.classList.contains('down')){
+            mydrop2.classList.remove('down');
+        }
+    }
+}
+function myFunction(elmnt,clr) {
+  document.style.color = clr;
+}
+</script>
+       <footer > <h1>contact us</h1>
+          <ul id="drop21">
+    <li style="background-color: #3b5998 " onclick="myFunction(this,'red')"><a href="https://www.facebook.com/Ethical-Hacking-2291910184357406">facebook</a></li>
+    <li style="background-color:#00acee" onclick="myFunction(this,'red')"><a href="https://twitter.com">twitter</a></li>
+    <li style="background-color:#0077B5" onclick="myFunction(this,'red')"><a href="https://www.linkedin.com/company/ethicalhackingpro">linkedin</a></li>
+    <li style="background-color:#c4302b" onclick="myFunction(this,'red')"><a href="https://www.youtube.com/channel/UC0ZTPkdxlAKf-V33tqXwi3Q">youtube</a></li>
+                            
+                                </ul>
+        </footer>
+       
+    </body>
+</html>

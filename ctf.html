@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ETHICAL HACKING</title>
+  <link rel="icon" href="images/hacker_PNG23.png">
+  <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet"href="nav.css">
+    <link rel="stylesheet"href="navb.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+    
+    background-color:azure;
+    
+    }
+    
+    .container
+    {
+        padding: 50px;
+    }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+{
+  border: 1px dotted black;
+}
+
+p.question {
+  font-family: Arial, sans-serif;
+	  font-size:20px;
+  color: #2E2E2E;
+  margin-bottom:0px;
+}
+
+h2.quizHeader {
+  font-family: Arial, sans-serif;
+  font-weight:normal;
+  font-size:25px;
+  line-height: 27px;
+  margin: 24px 0 12px 0;
+  padding: 0 0 4px 0;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+h2.quizScore{
+  font-family: Arial, sans-serif;
+  font-size:25px;
+}
+
+div.quizAnswers{
+  font-family: Arial, sans-serif;
+  font-size:16px;
+  color: #424242;
+  padding: 4px 0 4px 0;
+}
+
+label {
+  font-family: Arial, sans-serif;
+  font-size:14px;
+  color: #424242;
+  vertical-align:top;
+}
+
+input.answer[type="radio"] {
+  margin-bottom: 10px;
+}
+
+input.quizSubmit[type="submit"] {
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: auto;
+  -webkit-transition-delay: 0s, 0s;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -webkit-transition-property: color, background-color;
+  -webkit-transition-timing-function: ease, ease;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
+  color: #ffffff;
+  background-color: #c30b0a;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-transform:uppercase;
+  height:35px;
+  width:85px;
+  border: 1px solid #5E5E5E;
+  border-radius:5px;
+  
+ }
+
+input.quizSubmit[type="submit"]:hover {
+  color: #ffffff;
+  background: #680f11;
+  text-decoration: none;
+}
+
+table {
+  background-color: darkcyan;
+	  border:5px solid #BDBDBD;
+  border-radius:10px;
+  padding:10px;
+  padding-left:25px;
+  border-color:#00708b;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px;
+}
+
+th {
+  
+}
+
+tr {
+  
+}
+
+td {
+
+}
+
+.submitter {
+	  width:85px;
+}
+
+.hide {
+	  display:none;
+}
+
+
+/*SFS light red = #c30b0a;
+SFS dark red = #9f2026; */
+    
+
+        body{
+            font-family: 'lato',sans-serif;
+        }    
+        #after_submit{
+            visibility: hidden;
+        }
+        a#pink:active{
+            color: aqua;
+        }
+        
+        a#pink:hover{
+            background-color:hotpink;
+        }
+    
+</style>
+<body>
+    <header class="navbar">
+            <img class="logo" src="images/logo.png">
+            <nav id="toggle">
+                <ul>
+                    <li ><a href="home.html">Home</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li ><a onclick="menu()" id="ai" class="aii">More <span class="caret"></span></a>
+                    </li>
+                    <ul id="drop">
+                            <li><a href="ctf.html">CTF</a></li>
+                            <li><a href="phases.html">Phases of hacking</a></li>
+                            <li><a href="typesOfHackers.html">Types of hackers</a></li>
+                            <li><a href="types%20of%20attacks.html">Different types of attacks</a></li>
+                            <li id="ai" class="aii" onclick="dropd2()">
+                                MalWares<span class="caret"></span>
+                                <ul id="drop2">
+                                    <li><a href="ran.html">Ransomware</a></li>
+                                    <li><a href="keylogger.html">Keylogger</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                    <li id="lu"><a href="sign%20up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li id="lu"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-btn" onclick="toggleSlid()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+    <br><br><br>
+   <div class="container-fluid"> 
+  <div class="row">
+    <div class="col-sm-12" style="background-color:lavender; height: 0px;"><h4 style="text-align: center; color: darkcyan; font-family:sans-serif; font-size: 
+             60px;" >what  are ctfs?</h4>
+      <h3 style="color:darkturquoise;">CTFs are computer security/hacking competitions which generally consist of participants breaking, investigating, reverse engineering and doing anything they can to reach the end goal, a "flag" which is usually found as a string of text.
+
+DEF CON hosts what is the most widely known and first major CTF, occurring annually at the hacking conference in Las Vegas. Many different competitions have branched off since then, and numerous ones are available year round. One of the best places to see when CTFs are being scheduled is CTFTime, an active website with calendars and team rankings.
+          <h1 style="color:darkcyan; text-align: center;">CTF branches</h1>
+
+         
+          
+  <ul>
+        <li style="color: darkturquoise; list-style-type:none;"><h3>Forensics</h3></li>      
+        <li style="color: darkturquoise; list-style-type:none;"><h3>General Skills</h3></li>  
+        <li style="color: darkturquoise; list-style-type:none;"><h3>Reversing</h3></li>      
+        <li style="color: darkturquoise; list-style-type:none;"><h3>Cryptography</h3></li>
+        <li style="color: darkturquoise; list-style-type:none;"><h3>Web Exploitation</h3></li>
+        <li style="color: darkturquoise; list-style-type:none;"><h3>Binary Exploitation</h3></li>
+        
+    </ul>
+        <br>
+    <h2 style="color: darkcyan;" >Forensics</h2>
+    <h4 style="color: darkturquoise;">Forensic science is the application of sciences such as physics, chemistry, biology, computer science and engineering to matters of law. Forensic science can help investigators understand how blood spatter patterns occur (physics), learn the composition and source of evidence such as drugs and trace materials (chemistry) or determine the identity of an unknown suspect (biology).
+
+Forensic science plays a vital role in the criminal justice system by providing scientifically based information through the analysis of physical evidence. During an investigation, evidence is collected at a crime scene or from a person, analyzed in a crime laboratory and then the results presented in court. Each crime scene is unique, and each case presents its own challenges.</h4>
+    <div> <img src="images/for.jpg" style="float: right;"></div>
+    
+    <h2 style="color: darkcyan;">Reversing</h2> 
+    <h4 style="color: darkturquoise;">also called back engineering, is the process by which a man-made object is deconstructed to reveal its designs, architecture, or to extract knowledge from the object; similar to scientific research, the only difference being that scientific research is about a natural phenomenon.[1]:3
+
+Reverse engineering is applicable in the fields of mechanical engineering, electronic engineering, software engineering, chemical engineering,[2] and systems biology.[3]</h4>
+    <h2 style="color: darkcyan;">Cryptography</h2> 
+    <h4 style="color: darkturquoise;">Cryptography or cryptology (from Ancient Greek: κρυπτός, translit. kryptós "hidden, secret"; and γράφειν graphein, "to write", or -λογία -logia, "study", respectively[1]) is the practice and study of techniques for secure communication in the presence of third parties called adversaries.[2] More generally, cryptography is about constructing and analyzing protocols that prevent third parties or the public from reading private messages;[3] various aspects in information security such as data confidentiality, data integrity, authentication, and non-repudiation[4] are central to modern cryptography. Modern cryptography exists at the intersection of the disciplines of mathematics, computer science, electrical engineering, communication science, and physics. Applications of cryptography include electronic commerce, chip-based payment cards, digital currencies, computer passwords, and military communications.</h4>
+    <h2 style="color: darkcyan;">Web Exploitation</h2>
+    <h4 style="color: darkturquoise;">Websites are no longer merely about having an “Internet presence” today, but are also used for commercial transactions and to transfer sensitive data. Such wide usage helps crackers gain more knowledge on vulnerabilities and exploitation techniques than before. Various security studies show that attacking websites to gain fame or money is definitely on the rise. This article explains various Web vulnerabilities and the attacks that exploit them. We will also learn a few techniques that could be incorporated by systems administrators to protect a firm’s Web infrastructure.
+
+Before discussing how Web servers are cracked, let us first look into the various components that form a complete Web portal. To begin, a Web server is a service that </h4>
+          <h2 style="color: darkcyan;">Binary Exploitation</h2>
+          <h4 style="color: darkturquoise;">Binary exploitation is the process of subverting a compiled application such that it violates some trust boundary in a way that is advantageous to you, the attacker. In this module we are going to focus on memory corruption. By abusing vulnerabilities that corrupt memory in software we can often rewrite critical application state information in a way that allows us to elevate privileges inside the context of a particular application (like a remote desktop server) or perform arbitrary computation by hijacking control flow and running code of our choosing.
+
+</h4>
+    <br>
+       <br> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; background-color: darkcyan;">try it</button>
+          <p id="d" style="color:darkcyan; font-size: 25px;"></p>
+
+</h3>
+    </div>
+    </div>
+</div>
+
+<div id="id01" class="modal">
+  
+
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+
+    <div class="container">
+       <h2 class="quizHeader">let's see simple questions!</h2>
+  
+	<table style="width:700px">
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">1-Can you convert the number<br> 27 (base 10) to binary (base 2)?</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">11011</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>1111</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>1102</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>1110</label>
+    		</ul>
+	  	</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">2-If I told you your grade was 0x41 in hexadecimal,<br> what would it be in ASCII?
+
+</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>b</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">A</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>d</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>f</label>
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">3-What is 0x3D (base 16) in decimal (base 10)?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>40</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">61</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>22</label>
+	    	</ul>
+		</div>
+	  </td>
+	  <td>
+	  	<div>
+            <p class="question">4-Can you decode the following string <span style="color: red;">dGg0dF93NHNfczFtcEwz</span>from base64 format to ASCII?
+
+</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>confidintialty</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">hacking</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>intercept</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>hacker</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+	</table>
+<br/>
+  <div class="submitter">
+          <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+          type="submit" value="Submit" />
+    </div>
+  
+<!--show only wrong answers on submit-->
+    <div class="quizAnswers" id="correctAnswer1" style="color:red"></div>
+    <div class="quizAnswers" id="correctAnswer2"  style="color:red"></div>
+    <div class="quizAnswers" id="correctAnswer3"  style="color:red"></div>
+    <div class="quizAnswers" id="correctAnswer4"  style="color:red"></div>
+
+<!--show score upon submit-->
+    <div>
+    	<h2 class="quizScore" id="userScore" style="color: blue;"></h2>
+    </div>
+    <b>if you want more </b> 
+    <a id="pink" href="https://picoctf.com/get_started" style="font-size: 20px;">click here </a>
+
+     
+        
+     
+        
+    </div>
+
+    
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    
+    </div>
+ 
+
+
+<script>
+    function toggleSlid()
+{
+    document.getElementById("toggle").classList.toggle("active");
+}
+
+function menu(){
+    document.getElementById("drop").classList.toggle("down");    
+}
+
+function dropd2(){
+    document.getElementById("drop2").classList.toggle("down2");
+}
+
+window.onclick=function(e){
+    if(!e.target.matches('.aii')){
+        var mydrop2= document.getElementById("drop");
+        if ( mydrop2.classList.contains('down')){
+            mydrop2.classList.remove('down');
+        }
+    }
+}
+
+function submitQuiz() {
+		console.log('submitted');
+
+	// get each answer score
+		function answerScore (qName) {
+			var radiosNo = document.getElementsByName(qName);
+
+			for (var i = 0, length = radiosNo.length; i < length; i++) {
+   				if (radiosNo[i].checked) {
+			// do something with radiosNo
+					var answerValue = Number(radiosNo[i].value);
+				}
+			}
+			// change NaNs to zero
+			if (isNaN(answerValue)) {
+				answerValue = 0;
+			}
+			return answerValue;
+		}
+
+	// calc score with answerScore function
+		var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
+		console.log("CalcScore: " + calcScore); // it works!
+
+	// function to return correct answer string
+		function correctAnswer (correctStringNo, qNumber) {
+			console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
+			return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
+				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
+			}
+
+	// print correct answers only if wrong (calls correctAnswer function)
+		if (answerScore('q1') === 0) {
+			document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
+		}
+		if (answerScore('q2') === 0) {
+			document.getElementById('correctAnswer2').innerHTML = correctAnswer('correctString2', 2);
+		}
+		if (answerScore('q3') === 0) {
+			document.getElementById('correctAnswer3').innerHTML = correctAnswer('correctString3', 3);
+		}
+		if (answerScore('q4') === 0) {
+			document.getElementById('correctAnswer4').innerHTML = correctAnswer('correctString4', 4);
+		}
+
+	// calculate "possible score" integer
+		var questionCountArray = document.getElementsByClassName('question');
+
+		var questionCounter = 0;
+		for (var i = 0, length = questionCountArray.length; i < length; i++) {
+			questionCounter++;
+		}
+
+	// show score as "score/possible score"
+		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
+	// if 4/4, "perfect score!"
+		if (calcScore === questionCounter) {
+			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+		};
+		document.getElementById('userScore').innerHTML = showScore;
+	}
+
+$(document).ready(function() {
+
+	$('#submitButton').click(function() {
+		$(this).addClass('hide');
+	});
+
+});
+    
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+var d = new Date();
+document.getElementById("d").innerHTML = d;
+       function toggleSlid()
+{
+    document.getElementById("toggle").classList.toggle("active");
+}
+
+function menu(){
+    document.getElementById("drop").classList.toggle("down");    
+}
+
+function dropd2(){
+    document.getElementById("drop2").classList.toggle("down2");
+}
+
+window.onclick=function(e){
+    if(!e.target.matches('.aii')){
+        var mydrop2= document.getElementById("drop");
+        if ( mydrop2.classList.contains('down')){
+            mydrop2.classList.remove('down');
+        }
+    }
+}
+</script>
+
+</body>
+</html>
+
+
